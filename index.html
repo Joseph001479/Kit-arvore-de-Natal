@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit Premium de Natal | Oferta Exclusiva</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a3d2d;
+            --secondary: #c9a86d;
+            --accent: #c52c28;
+            --light: #f8f8f8;
+            --dark: #1a1a1a;
+            --gold: #d4af37;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Premium */
+        header {
+            background: rgba(10, 61, 45, 0.98);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(201, 168, 109, 0.3);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Cinzel', serif;
+        }
+        
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--gold) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            border: 2px solid white;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+        
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .logo-subtext {
+            font-size: 12px;
+            letter-spacing: 3px;
+            opacity: 0.8;
+            text-transform: uppercase;
+        }
+        
+        /* Hero Section Premium */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1546941128-91a35e8a5f6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/diagmonds.png');
+            opacity: 0.1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+            letter-spacing: 1px;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .exclusive-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--gold) 100%);
+            color: var(--primary);
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .price-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 35px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 30px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .price-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 2px solid var(--secondary);
+            border-radius: 25px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            font-size: 2rem;
+            color: #ccc;
+            margin-bottom: 5px;
+        }
+        
+        .new-price {
+            font-size: 4.5rem;
+            font-weight: 800;
+            color: var(--gold);
+            margin: 10px 0;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+            font-family: 'Cinzel', serif;
+        }
+        
+        .discount-badge {
+            background: linear-gradient(135deg, var(--accent) 0%, #e74c3c 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 1.3rem;
+            box-shadow: 0 5px 15px rgba(197, 44, 40, 0.4);
+        }
+        
+        .countdown {
+            margin: 40px 0;
+            font-size: 1.3rem;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .countdown-unit {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 15px;
+            min-width: 100px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .countdown-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: 'Cinzel', serif;
+        }
+        
+        .countdown-label {
+            font-size: 1rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--gold) 100%);
+            color: var(--primary);
+            padding: 25px 60px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 40px 0 30px;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(184, 134, 11, 0.5);
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Cinzel', serif;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: 0.5s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(184, 134, 11, 0.6);
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .security-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 1rem;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .badge i {
+            margin-right: 12px;
+            color: var(--gold);
+            font-size: 1.3rem;
+        }
+        
+        /* Features Premium */
+        .features {
+            padding: 120px 0;
+            background-color: white;
+            position: relative;
+        }
+        
+        .features::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/white-texture.png');
+            opacity: 0.03;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            margin-bottom: 70px;
+            color: var(--primary);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--gold) 100%);
+            margin: 25px auto;
+            border-radius: 2px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 50px 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            background: white;
+            border: 1px solid rgba(201, 168, 109, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--gold) 100%);
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+        }
+        
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+        
+        .feature-icon::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--gold) 100%);
+        }
+        
+        .feature-item h3 {
+            font-size: 1.7rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            font-family: 'Cinzel', serif;
+        }
+        
+        .feature-item p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Product Details Premium */
+        .product-details {
+            padding: 120px 0;
+            background: linear-gradient(to bottom, #f8f8f8 0%, #ffffff 100%);
+            position: relative;
+        }
+        
+        .product-details::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+            opacity: 0.05;
+        }
+        
+        .product-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .product-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .product-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transition: var(--transition);
+            border: 5px solid white;
+        }
+        
+        .product-image:hover img {
+            transform: scale(1.03);
+        }
+        
+        .product-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .product-info h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+        
+        .specs-list {
+            list-style: none;
+            margin: 35px 0;
+        }
+        
+        .specs-list li {
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+        
+        .specs-list i {
+            color: var(--gold);
+            margin-right: 18px;
+            font-size: 1.5rem;
+            min-width: 30px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+        
+        /* Included Items Premium */
+        .included-items {
+            padding: 120px 0;
+            background-color: white;
+            position: relative;
+        }
+        
+        .included-items::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/white-texture.png');
+            opacity: 0.03;
+        }
+        
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 35px;
+        }
+        
+        .item-card {
+            background: linear-gradient(135deg, #f8f8f8 0%, #eeeeee 100%);
+            padding: 30px 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            transition: var(--transition);
+            border: 1px solid rgba(201, 168, 109, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .item-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--gold) 100%);
+        }
+        
+        .item-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .item-card i {
+            font-size: 3.2rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .item-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Testimonials Premium */
+        .testimonials {
+            padding: 120px 0;
+            background: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
+            position: relative;
+        }
+        
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+            opacity: 0.05;
+        }
+        
+        .testimonial-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            margin: 40px 0;
+            position: relative;
+            border: 1px solid rgba(201, 168, 109, 0.1);
+        }
+        
+        .testimonial::before {
+            content: '"';
+            font-family: 'Cinzel', serif;
+            font-size: 8rem;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            opacity: 0.1;
+            line-height: 1;
+            color: var(--gold);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 30px;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            font-family: 'Cinzel', serif;
+        }
+        
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+            border: 3px solid var(--gold);
+        }
+        
+        /* FAQ Premium */
+        .faq {
+            padding: 120px 0;
+            background-color: white;
+            position: relative;
+        }
+        
+        .faq::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/white-texture.png');
+            opacity: 0.03;
+        }
+        
+        .faq-item {
+            margin-bottom: 35px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 35px;
+        }
+        
+        .faq-question {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Cinzel', serif;
+        }
+        
+        .faq-answer {
+            color: #666;
+            line-height: 1.8;
+            padding-right: 50px;
+            font-size: 1.1rem;
+        }
+        
+        /* Final CTA Premium */
+        .final-cta {
+            padding: 150px 0;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1574359173084-bfcee66c2c2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80') no-repeat center center/cover;
+            color: white;
+            position: relative;
+        }
+        
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/diagmonds.png');
+            opacity: 0.1;
+        }
+        
+        .final-cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .final-cta h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .guarantee {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 50px 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        
+        .guarantee::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 2px solid var(--gold);
+            border-radius: 25px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        .guarantee h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+        
+        /* Footer Premium */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 80px 0 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--gold) 100%);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 280px;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+        }
+        
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .payment-method {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid #444;
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1100px) {
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .new-price {
+                font-size: 3.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 150px 0 80px;
+                min-height: auto;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .new-price {
+                font-size: 3.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .countdown-unit {
+                min-width: 80px;
+                padding: 15px;
+            }
+            
+            .countdown-value {
+                font-size: 2rem;
+            }
+            
+            .product-content {
+                flex-direction: column;
+            }
+            
+            .cta-button {
+                padding: 20px 50px;
+                font-size: 1.3rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-img">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div>
+                    <div class="logo-text">NatalElite</div>
+                    <div class="logo-subtext">COLEÇÃO EXCLUSIVA</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="exclusive-badge">Edição Limitada</div>
+            <h1>Kit Premium de Natal <br> com 58 Itens Exclusivos</h1>
+            <p>Eleve sua decoração natalina com nosso kit de luxo por um preço especial</p>
+            
+            <div class="price-container">
+                <div class="old-price">De: R$ 169,90</div>
+                <div class="new-price">R$ 79,90</div>
+                <div class="discount-badge">Economize 53%</div>
+            </div>
+            
+            <div class="countdown">
+                <p>Esta oferta exclusiva termina em:</p>
+                <div class="countdown-timer">
+                    <div class="countdown-unit">
+                        <div class="countdown-value">03</div>
+                        <div class="countdown-label">Horas</div>
+                    </div>
+                    <div class="countdown-unit">
+                        <div class="countdown-value">45</div>
+                        <div class="countdown-label">Minutos</div>
+                    </div>
+                    <div class="countdown-unit">
+                        <div class="countdown-value">18</div>
+                        <div class="countdown-label">Segundos</div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="https://pay.marketplacecomprasonline.com/checkout/9dd40935-00ce-4eaf-8cc5-7ed9b0bff3cd" class="cta-button pulse">
+                <i class="fas fa-gift"></i> COMPRAR AGORA
+            </a>
+            
+            <div class="security-badges">
+                <div class="badge">
+                    <i class="fas fa-lock"></i>
+                    <span>Compra 100% Segura</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-truck"></i>
+                    <span>Entrega Expressa</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Garantia de 7 Dias</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-star"></i>
+                    <span>Produto Premium</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Excelência em Cada Detalhe</h2>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Qualidade Superior</h3>
+                    <p>Materiais selecionados e acabamento impecável para um Natal verdadeiramente luxuoso.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Design Exclusivo</h3>
+                    <p>Peças únicas com design sofisticado que transformam qualquer ambiente.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3>Entrega Grátis</h3>
+                    <p>Entregamos em todo o Brasil com frete expresso e rastreamento em tempo real.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details -->
+    <section class="product-details">
+        <div class="container">
+            <h2 class="section-title">A Arte da Decoração Natalina</h2>
+            
+            <div class="product-content">
+                <div class="product-image">
+                    <img src="img/arvore-1.jpg" alt="Árvore de Natal Nevada 1,80m" class="float">
+                </div>
+                
+                <div class="product-info">
+                    <h2>Árvore de Natal Nevada 1,80m</h2>
+                    <p>Nossa árvore de Natal premium de 1,80m é a peça central perfeita para suas celebrações. Com 320 galhos realistas e base de ferro resistente, ela oferece estabilidade e beleza incomparáveis, criando um ambiente acolhedor e sofisticado.</p>
+                    
+                    <ul class="specs-list">
+                        <li><i class="fas fa-check-circle"></i> Altura: 1,80m (180cm) - Dimensões perfeitas</li>
+                        <li><i class="fas fa-check-circle"></i> Cor: Nevada (branco e verde) - Elegância atemporal</li>
+                        <li><i class="fas fa-check-circle"></i> 320 galhos - Densidade premium</li>
+                        <li><i class="fas fa-check-circle"></i> Base de ferro estável - Segurança garantida</li>
+                        <li><i class="fas fa-check-circle"></i> Montagem intuitiva - Pronta em minutos</li>
+                        <li><i class="fas fa-check-circle"></i> Materiais de alta qualidade - Durabilidade superior</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Included Items -->
+    <section class="included-items">
+        <div class="container">
+            <h2 class="section-title">Composição do Kit Elite</h2>
+            
+            <div class="items-grid">
+                <div class="item-card">
+                    <i class="fas fa-tree"></i>
+                    <h3>Árvore de Natal 1,80m</h3>
+                    <p>Peça principal com 320 galhos</p>
+                </div>
+                
+                <div class="item-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Pisca-Pisca LED</h3>
+                    <p>Iluminação premium com 200 LEDs</p>
+                </div>
+                
+                <div class="item-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Estrela Ponteira</h3>
+                    <p>Acabamento brilhante e resistente</p>
+                </div>
+                
+                <div class="item-card">
+                    <i class="fas fa-circle"></i>
+                    <h3>Bolas Decoradas</h3>
+                    <p>12 unidades (5cm) - Acabamento premium</p>
+                </div>
+                
+                <div class="item-card">
+                    <i class="fas fa-candy-cane"></i>
+                    <h3>Bengalas</h3>
+                    <p>6 unidades - Design tradicional</p>
+                </div>
+                
+                <div class="item-card">
+                    <i class="fas fa-ribbon"></i>
+                    <h3>Festão</h3>
+                    <p>1 unidade - 3 metros de extensão</p>
+                </div>
+                
+                <div class="item-card">
+                    <i class="fas fa-drum"></i>
+                    <h3>Tambores</h3>
+                    <p>12 unidades - Detalhes realistas</p>
+                </div>
+                
+                <div class="item-card">
+                    <i class="fas fa-gift"></i>
+                    <h3>Pacotes de Presente</h3>
+                    <p>12 unidades - Variedade de cores</p>
+                </div>
+                
+                <div class="item-card">
+                    <i class="fas fa-bowribbon"></i>
+                    <h3>Laços Decorativos</h3>
+                    <p>12 unidades - Acabamento em veludo</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 50px; font-style: italic; font-size: 1.1rem;">
+                <strong>Nota:</strong> Os modelos dos enfeites podem variar conforme o estoque disponível, mas sempre respeitaremos a quantidade exata de 58 itens e a qualidade premium!
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Excelência Reconhecida</h2>
+            
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Comprei o kit no ano passado e superou todas as minhas expectativas! A qualidade dos materiais é excepcional, perceptível em cada detalhe. A árvore é magnífica e os enfeites têm um acabamento que realmente transmite luxo e sofisticação. Recebi diversos elogios e recomendo para quem busca uma decoração premium."</p>
+                    <p class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Cliente">
+                        Maria Silva, São Paulo
+                    </p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"Como designer de interiores, sou extremamente criterioso com decorações natalinas. Este kit surpreendeu pela atenção aos detalhes e qualidade superior dos materiais. A árvore tem uma densidade impressionante de galhos e os enfeites possuem um acabamento que rivaliza com peças importadas de alto padrão. Um excelente investimento!"</p>
+                    <p class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente">
+                        Roberto Mendes, Rio de Janeiro
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Qual é o prazo de entrega?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Utilizamos transporte prioritário para garantir que seu kit chegue rapidamente. O prazo médio é de 5 a 10 dias úteis após a confirmação do pagamento, dependendo da região. Para grandes centros metropolitanos, o prazo pode ser reduzido para 3-5 dias úteis.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Como é realizada a montagem da árvore?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>A árvore foi projetada para montagem intuitiva e rápida. Ela é dividida em 3 seções que se encaixam perfeitamente. Os galhos são articulados e apenas precisam ser posicionados para criar volume. Incluímos um manual ilustrado detalhado, mas a maioria de nossos clientes reporta que a montagem completa leva menos de 15 minutos.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Quais são os materiais utilizados?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Utilizamos materiais premium em toda a composição do kit. A árvore é confeccionada em PVC de alta densidade com aparência extremamente realista. A base é em metal reforçado para máxima estabilidade. Os enfeites utilizam uma combinação de plástico de engenharia, acrílico, vidro temperado e metais com acabamento anti-oxidação para garantir durabilidade e brilho prolongados.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>As luzes são realmente LED?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Sim, todas as luzes inclusas no kit utilizam tecnologia LED de última geração. São 200 micro LEDs que consomem 80% menos energia que as luzes tradicionais, não esquentam (garantindo segurança mesmo para famílias com crianças e pets) e possuem vida útil estimada em mais de 30.000 horas. O fio das luzes possui 5 metros de comprimento para oferecer liberdade na decoração.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="comprar">
+        <div class="container final-cta-content">
+            <h2>Eleve Sua Celebração Natalina</h2>
+            <p>Experiencie o padrão de excelência por um preço especial</p>
+            
+            <div class="price-container">
+                <div class="old-price">De: R$ 169,90</div>
+                <div class="new-price">R$ 79,90</div>
+                <div class="discount-badge">53% OFF</div>
+            </div>
+            
+            <div class="guarantee">
+                <h3><i class="fas fa-shield-alt"></i> Garantia de Satisfação Elite</h3>
+                <p>Oferecemos garantia incondicional de 7 dias. Se por qualquer motivo você não ficar completamente satisfeito com a qualidade premium do produto, devolvemos 100% do seu investimento sem questionamentos.</p>
+            </div>
+            
+            <a href="https://pay.marketplacecomprasonline.com/checkout/9dd40935-00ce-4eaf-8cc5-7ed9b0bff3cd" class="cta-button pulse">
+                <i class="fas fa-crown"></i> COMPRAR AGORA
+            </a>
+            <p>Promoção exclusiva por tempo limitado. Edição especial com quantidade restrita.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>NatalElite</h3>
+                    <p>Decorações natalinas de padrão superior para momentos especiais.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Atendimento Personalizado</h3>
+                    <p><i class="fas fa-envelope"></i> elite@natalelite.com.br</p>
+                    <p><i class="fas fa-phone"></i> (11) 3000-9000</p>
+                    <p><i class="fas fa-clock"></i> Segunda a Sábado: 8h às 20h</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Formas de Pagamento</h3>
+                    <div class="payment-methods">
+                        <div class="payment-method">Cartão de Crédito</div>
+                        <div class="payment-method">PIX</div>
+                        <div class="payment-method">Boleto</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 NatalElite - Todos os direitos reservados. CNPJ: 12.345.678/0001-99</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                const icon = question.querySelector('i');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+        
+        // Countdown timer
+        function updateCountdown() {
+            const hours = document.querySelector('.countdown-unit:nth-child(1) .countdown-value');
+            const minutes = document.querySelector('.countdown-unit:nth-child(2) .countdown-value');
+            const seconds = document.querySelector('.countdown-unit:nth-child(3) .countdown-value');
+            
+            let h = parseInt(hours.textContent);
+            let m = parseInt(minutes.textContent);
+            let s = parseInt(seconds.textContent);
+            
+            s--;
+            
+            if (s < 0) {
+                s = 59;
+                m--;
+                
+                if (m < 0) {
+                    m = 59;
+                    h--;
+                    
+                    if (h < 0) {
+                        h = 0;
+                        m = 0;
+                        s = 0;
+                    }
+                }
+            }
+            
+            hours.textContent = h.toString().padStart(2, '0');
+            minutes.textContent = m.toString().padStart(2, '0');
+            seconds.textContent = s.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
